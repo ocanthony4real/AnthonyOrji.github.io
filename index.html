@@ -1,161 +1,1086 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Anthony Orji's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Orji | ML Engineer & Data Analyst</title>
+    <meta name="description" content="ML Engineer and Data Analyst building end-to-end AI solutions. Fine-tuning LLMs, RAG pipelines, and production ML systems.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a0a0a8;
+            --accent-ai: #8b5cf6;
+            --accent-ai-glow: rgba(139, 92, 246, 0.3);
+            --accent-data: #22d3ee;
+            --accent-data-glow: rgba(34, 211, 238, 0.3);
+            --gradient-ai: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+            --gradient-data: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+            --gradient-hero: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Anthony Orji<br />
-						</h1>
-						<p>This is a portfolio that showcases my skillset in data analysis and in the use of the relevant tools, which include Python, PowerBI, Microsoft Excel, SQl, and Tableau. You can get visit 
-							my twitter handle at <a href="https://twitter.com/ocanthony4real">@ocanthony4real</a>, my LinkedIn page at <a href=https://www.linkedin.com/in/anthony-orji-02311b233/> Anthony Orji</a>, and my Github page at <a href=https://github.com/ocanthony4real>@ocanthony4real</a>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        html {
+            scroll-behavior: smooth;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Anthony</a>
-					</header>
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">My Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							<li><a href="https://twitter.com/ocanthony4real" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.linkedin.com/in/anthony-orji-02311b233" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/ocanthony4real" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        /* Subtle grain texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="https://medium.com/@ocanthony4real/tony-supermarket-sales-analysis-63798f421589">Supermarket Sales Analysis<br />
-									</a></h2>
-									<p>This is a data analysis using PowerBi</p>
-								</header>
-								<a href="https://medium.com/@ocanthony4real/tony-supermarket-sales-analysis-63798f421589" class="image main"><img src="images/supermarket.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://medium.com/@ocanthony4real/tony-supermarket-sales-analysis-63798f421589" class="button large">SEE PROJECT</a></li>
-								</ul>
-							</article>
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ocanthony4real/Financial-Analysis-of-Top-5-American-Electronic-Manufacturing-Companies">Top 5 American Electronic ManufacturIng Companies<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ocanthony4real/Financial-Analysis-of-Top-5-American-Electronic-Manufacturing-Companies" class="image fit"><img src="images/electronic.jfif" alt="" /></a>
-									<p>This is a financial analysis of the top 5 Ameriacan Manufacturing Company using Python.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ocanthony4real/Financial-Analysis-of-Top-5-American-Electronic-Manufacturing-Companies" class="button">SEE PROJECT</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ocanthony4real/Mexico-Toy-Sales-Analysis-SQL-">Mexico Toy Sales Analysis<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ocanthony4real/Mexico-Toy-Sales-Analysis-SQL-" class="image fit"><img src="images/toy.jfif" alt="" /></a>
-									<p>This is an analysis on a sales dataset. Data wrangling was done using SQL while the dashboard was made using PowerBi.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ocanthony4real/Mexico-Toy-Sales-Analysis-SQL-" class="button">SEE PROJECT</a></li>
-									</ul>
-								</article>
-								
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ocanthony4real/Fashion-Data-Exploration-Excel-/blob/main/README.md">Fashion Data Analysis<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ocanthony4real/Fashion-Data-Exploration-Excel-/blob/main/README.md" class="image fit"><img src="images/fashion.jfif" alt="" /></a>
-									<p>This project showcases my ability to clean a dataset using Microsoft Excel</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ocanthony4real/Fashion-Data-Exploration-Excel-/blob/main/README.md" class="button">SEE PROJECT</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ocanthony4real/Data-Analysis-on-Toyota-Motors-using-SQL">Toyota Motors<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ocanthony4real/Data-Analysis-on-Toyota-Motors-using-SQL" class="image fit"><img src="images/Toyota.jfif" alt="" /></a>
-									<p>This is an analysis on the financial records Toyota Motors. The data was extracted from Yahoo Finance. I used Python in extracting and cleaning the data, thereafter I used SQL to  explore the data.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ocanthony4real/Data-Analysis-on-Toyota-Motors-using-SQL" class="button">SEE PROJECT</a></li>
-									</ul>
-								</article>
-								
-							</section>
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
 
-						<!-- Footer -->
-							
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-				<!-- Footer -->
-					
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="+2347067331180">+2347067331180</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">ocanthony4real@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://twitter.com/ocanthony4real" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.linkedin.com/in/anthony-orji-02311b233" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/ocanthony4real" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-hero);
+            transition: width 0.3s ease;
+        }
 
-			</div>
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
 
-	</body>
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(217, 70, 239, 0.1), transparent),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(34, 211, 238, 0.08), transparent);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        .hero h1 span {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 3rem;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-ai {
+            background: var(--gradient-ai);
+            color: white;
+            box-shadow: 0 4px 20px var(--accent-ai-glow);
+        }
+
+        .btn-ai:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--accent-ai-glow);
+        }
+
+        .btn-data {
+            background: var(--gradient-data);
+            color: white;
+            box-shadow: 0 4px 20px var(--accent-data-glow);
+        }
+
+        .btn-data:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--accent-data-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card);
+            border-color: var(--accent-ai);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section styling */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-label-ai {
+            color: var(--accent-ai);
+        }
+
+        .section-label-data {
+            color: var(--accent-data);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--bg-card);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-image-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-hero);
+            opacity: 0.1;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-text p strong {
+            color: var(--text-primary);
+        }
+
+        .about-highlight {
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-left: 3px solid var(--accent-ai);
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+        }
+
+        .about-highlight p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Two Column Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .expertise-column {
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .expertise-column-ai {
+            border-top: 3px solid var(--accent-ai);
+        }
+
+        .expertise-column-data {
+            border-top: 3px solid var(--accent-data);
+        }
+
+        .expertise-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .expertise-column h3 span {
+            font-size: 1.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .skill-tag-ai {
+            background: rgba(139, 92, 246, 0.15);
+            color: #c4b5fd;
+        }
+
+        .skill-tag-data {
+            background: rgba(34, 211, 238, 0.15);
+            color: #67e8f9;
+        }
+
+        /* Project Sections */
+        .projects-section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-section-ai {
+            background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.03) 50%, transparent 100%);
+        }
+
+        .projects-section-data {
+            background: linear-gradient(180deg, transparent 0%, rgba(34, 211, 238, 0.03) 50%, transparent 100%);
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card-ai::before {
+            background: var(--gradient-ai);
+        }
+
+        .project-card-data::before {
+            background: var(--gradient-data);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card-ai:hover {
+            border-color: var(--accent-ai);
+        }
+
+        .project-card-data:hover {
+            border-color: var(--accent-data);
+        }
+
+        .project-featured {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(217, 70, 239, 0.04) 100%);
+        }
+
+        .project-featured-data {
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%);
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .project-badge-ai {
+            background: rgba(139, 92, 246, 0.2);
+            color: #c4b5fd;
+        }
+
+        .project-badge-data {
+            background: rgba(34, 211, 238, 0.2);
+            color: #67e8f9;
+        }
+
+        .project-badge-featured {
+            background: rgba(234, 179, 8, 0.15);
+            color: #fbbf24;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .project-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .project-link-ai:hover {
+            background: var(--accent-ai);
+            border-color: var(--accent-ai);
+            color: white;
+        }
+
+        .project-link-data:hover {
+            background: var(--accent-data);
+            border-color: var(--accent-data);
+            color: white;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-highlights li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .project-highlights-ai li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-ai);
+        }
+
+        .project-highlights-data li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-data);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.4rem 0.8rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-text {
+            color: var(--text-secondary);
+            max-width: 550px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent-ai);
+            transform: translateY(-2px);
+        }
+
+        .contact-link span {
+            font-size: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section, .projects-section {
+                padding: 4rem 1.5rem;
+            }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">AO</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#ai-projects">AI/ML</a></li>
+            <li><a href="#data-projects">Data Analysis</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1>Anthony <span>Orji</span></h1>
+            <p class="hero-tagline">ML Engineer & Data Analyst building end-to-end AI solutions and data-driven insights — from research papers to production systems.</p>
+            <div class="hero-cta">
+                <a href="#ai-projects" class="btn btn-ai">
+                    <span>🧠</span> AI/ML Projects
+                </a>
+                <a href="#data-projects" class="btn btn-data">
+                    <span>📊</span> Data Analysis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <span class="section-label section-label-ai">About Me</span>
+            <h2 class="section-title">Building AI That Works</h2>
+        </div>
+        <div class="about-content fade-in">
+            <div class="about-image">
+                <div class="about-image-placeholder">
+                    <!-- Replace this with your actual photo: <img src="your-photo.jpg" alt="Anthony Orji"> -->
+                    👨‍💻
+                </div>
+            </div>
+            <div class="about-text">
+                <p>I'm an ML Engineer and Data Analyst with a passion for turning complex problems into elegant, production-ready solutions. My work spans two complementary domains:</p>
+                
+                <p><strong>On the AI/ML side:</strong> I fine-tune large language models, build RAG pipelines, and deploy production ML systems. My Nigeria Tax Law AI Assistant showcases the full MLOps lifecycle — from data preparation to a live FastAPI + Next.js deployment.</p>
+                
+                <p><strong>On the Data Analysis side:</strong> I design relational databases, write complex SQL queries, and build Power BI dashboards that drive business decisions. I translate raw data into actionable insights for stakeholders.</p>
+
+                <div class="about-highlight">
+                    <p>I hold a <strong>B.Eng. in Electronic Engineering</strong> (Second Class Upper) from the University of Nigeria, Nsukka. My research on wind power prediction using a novel GLS-CA-BiLSTM model is currently under review at <strong>Elsevier's Electric Power Systems Research</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Skills -->
+        <div class="expertise-grid fade-in">
+            <div class="expertise-column expertise-column-ai">
+                <h3><span>🧠</span> AI/ML Engineering</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag-ai">LLM Fine-tuning</span>
+                    <span class="skill-tag skill-tag-ai">QLoRA</span>
+                    <span class="skill-tag skill-tag-ai">RAG Pipelines</span>
+                    <span class="skill-tag skill-tag-ai">PyTorch</span>
+                    <span class="skill-tag skill-tag-ai">LangChain</span>
+                    <span class="skill-tag skill-tag-ai">Hugging Face</span>
+                    <span class="skill-tag skill-tag-ai">AWS SageMaker</span>
+                    <span class="skill-tag skill-tag-ai">Docker</span>
+                    <span class="skill-tag skill-tag-ai">FastAPI</span>
+                    <span class="skill-tag skill-tag-ai">Qdrant</span>
+                    <span class="skill-tag skill-tag-ai">ZenML</span>
+                    <span class="skill-tag skill-tag-ai">BiLSTM</span>
+                    <span class="skill-tag skill-tag-ai">MATLAB</span>
+                </div>
+            </div>
+            <div class="expertise-column expertise-column-data">
+                <h3><span>📊</span> Data Analysis</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag-data">Power BI</span>
+                    <span class="skill-tag skill-tag-data">SQL</span>
+                    <span class="skill-tag skill-tag-data">MySQL</span>
+                    <span class="skill-tag skill-tag-data">PostgreSQL</span>
+                    <span class="skill-tag skill-tag-data">Python</span>
+                    <span class="skill-tag skill-tag-data">Pandas</span>
+                    <span class="skill-tag skill-tag-data">Excel</span>
+                    <span class="skill-tag skill-tag-data">DAX</span>
+                    <span class="skill-tag skill-tag-data">Data Modeling</span>
+                    <span class="skill-tag skill-tag-data">ETL</span>
+                    <span class="skill-tag skill-tag-data">Matplotlib</span>
+                    <span class="skill-tag skill-tag-data">Seaborn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/ML Projects Section -->
+    <div class="projects-section projects-section-ai" id="ai-projects">
+        <div class="section-header">
+            <span class="section-label section-label-ai">Portfolio</span>
+            <h2 class="section-title">🧠 AI/ML Projects</h2>
+        </div>
+        <div class="projects-grid">
+            
+            <!-- Project 1: Nigeria Tax Law AI (TOP PRIORITY) -->
+            <div class="project-card project-card-ai project-featured fade-in">
+                <div class="project-badge project-badge-featured">⭐ Featured Project</div>
+                <div class="project-header">
+                    <h3>Nigeria Tax Law AI Assistant</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/ocanthony4real/Nigeria-Tax-Bill-Chatbox" target="_blank" class="project-link project-link-ai" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://ocanthony4real.github.io/Nigeria-Tax-Bill-Chatbox/" target="_blank" class="project-link project-link-ai" title="Documentation">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h6v6h6v10H6z"/><path d="M8 12h8v2H8zm0 4h8v2H8z"/></svg>
+                        </a>
+                        <a href="https://huggingface.co/ocanthony4real/NigeriaTaxLlama-3.1-8B-RAG-v3" target="_blank" class="project-link project-link-ai" title="Hugging Face Model">
+                            🤗
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">Built a production-ready AI chatbot that answers questions about Nigerian tax law using fine-tuned LLaMA 3.1 8B with a RAG pipeline. Demonstrates the full MLOps lifecycle from data preparation to deployment.</p>
+                <ul class="project-highlights project-highlights-ai">
+                    <li>Fine-tuned LLaMA 3.1 8B using QLoRA (4-bit quantization) on custom tax law Q&A dataset</li>
+                    <li>RAG pipeline with Qdrant vector database for accurate document retrieval</li>
+                    <li>MLOps: AWS SageMaker + ZenML orchestration + Comet ML experiment tracking</li>
+                    <li>FastAPI backend with Next.js frontend for responsive chat interface</li>
+                    <li>Model published on Hugging Face Hub</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">LLaMA 3.1</span>
+                    <span class="tech-tag">QLoRA</span>
+                    <span class="tech-tag">RAG</span>
+                    <span class="tech-tag">Qdrant</span>
+                    <span class="tech-tag">AWS SageMaker</span>
+                    <span class="tech-tag">ZenML</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Next.js</span>
+                </div>
+            </div>
+
+            <!-- Project 2: Wind Power Research -->
+            <div class="project-card project-card-ai fade-in">
+                <div class="project-badge project-badge-ai">📄 Under Review — Elsevier</div>
+                <div class="project-header">
+                    <h3>Wind Power Prediction Research</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/ocanthony4real/GLS-CA-BiLSTM" target="_blank" class="project-link project-link-ai" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">Developed a novel GLS-CA-BiLSTM hybrid model for wind power prediction — combining Guided Learning Strategy with Camel Algorithm optimization and Bidirectional LSTM networks. Submitted to Elsevier's Electric Power Systems Research.</p>
+                <ul class="project-highlights project-highlights-ai">
+                    <li>Novel architecture outperformed baseline LSTM, BiLSTM, and CA-BiLSTM models</li>
+                    <li>10-year hourly dataset (2014-2023) covering 4 university sites in Northern Nigeria</li>
+                    <li>Achieved R² values up to 0.9932 on test data</li>
+                    <li>Key finding: Best turbine for power ≠ best turbine for prediction accuracy</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">MATLAB</span>
+                    <span class="tech-tag">Simulink</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">BiLSTM</span>
+                    <span class="tech-tag">Metaheuristic Optimization</span>
+                </div>
+            </div>
+
+            <!-- Project 3: Student Performance -->
+            <div class="project-card project-card-ai fade-in">
+                <div class="project-header">
+                    <h3>Student Performance Prediction</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/ocanthony4real/Students-Performance-Prediction-Using-SMOTE-and-RF" target="_blank" class="project-link project-link-ai" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">Machine learning system to predict student academic performance, addressing class imbalance with SMOTE and deploying an interactive Streamlit web application for real-time predictions.</p>
+                <ul class="project-highlights project-highlights-ai">
+                    <li>Random Forest classifier with hyperparameter tuning</li>
+                    <li>SMOTE for handling imbalanced classes</li>
+                    <li>Streamlit web app for interactive predictions</li>
+                    <li>Feature importance analysis and model interpretability</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Random Forest</span>
+                    <span class="tech-tag">SMOTE</span>
+                    <span class="tech-tag">Streamlit</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Data Analysis Projects Section -->
+    <div class="projects-section projects-section-data" id="data-projects">
+        <div class="section-header">
+            <span class="section-label section-label-data">Portfolio</span>
+            <h2 class="section-title">📊 Data Analysis Projects</h2>
+        </div>
+        <div class="projects-grid">
+            
+            <!-- Project 1: Special Performance Report (TOP PRIORITY) -->
+            <div class="project-card project-card-data project-featured-data fade-in">
+                <div class="project-badge project-badge-featured">⭐ Featured Project</div>
+                <div class="project-header">
+                    <h3>Special Performance Report</h3>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/posts/anthony-orji-02311b233_a-data-analysis-report-activity-7084460939021811712-nInB/" target="_blank" class="project-link project-link-data" title="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">Designed a complete MySQL relational database from scratch, implemented efficient schema design with proper relationships, and built Power BI visualizations to deliver executive-level insights. Demonstrates full-stack data analysis skills from database architecture to stakeholder-ready reporting.</p>
+                <ul class="project-highlights project-highlights-data">
+                    <li>MySQL database design with normalized schema and proper relationships</li>
+                    <li>Complex SQL queries for business metrics extraction</li>
+                    <li>Power BI dashboard with interactive visualizations</li>
+                    <li>Executive report formatted for business stakeholders</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Database Design</span>
+                    <span class="tech-tag">Data Modeling</span>
+                </div>
+            </div>
+
+            <!-- Project 2: Supermarket Sales -->
+            <div class="project-card project-card-data fade-in">
+                <div class="project-header">
+                    <h3>Supermarket Sales Analysis</h3>
+                    <div class="project-links">
+                        <a href="https://medium.com/@ocanthony4real/tony-supermarket-sales-analysis-63798f421589" target="_blank" class="project-link project-link-data" title="Medium Article">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">Interactive Power BI dashboard analyzing supermarket sales data, uncovering trends in customer behavior, product performance, and revenue patterns. Enables data-driven decision making for retail operations.</p>
+                <ul class="project-highlights project-highlights-data">
+                    <li>Customer behavior and purchase pattern analysis</li>
+                    <li>Product performance metrics and KPIs</li>
+                    <li>Revenue trend visualization</li>
+                    <li>Interactive filtering and drill-down capabilities</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">DAX</span>
+                    <span class="tech-tag">Data Modeling</span>
+                </div>
+            </div>
+
+            <!-- Project 3: Electronics Companies -->
+            <div class="project-card project-card-data fade-in">
+                <div class="project-header">
+                    <h3>Top 5 Electronics Companies Analysis</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/ocanthony4real/Financial-Analysis-of-Top-5-American-Electronic-Manufacturing-Companies" target="_blank" class="project-link project-link-data" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">Comprehensive financial analysis of top American electronics manufacturing companies using Python. Extracts financial data, calculates key metrics, and visualizes trends to support investment analysis.</p>
+                <ul class="project-highlights project-highlights-data">
+                    <li>Financial data extraction and processing</li>
+                    <li>Key financial metrics calculation</li>
+                    <li>Trend visualization and comparative analysis</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Matplotlib</span>
+                    <span class="tech-tag">Financial APIs</span>
+                </div>
+            </div>
+
+            <!-- Project 4: Mexico Toy Sales -->
+            <div class="project-card project-card-data fade-in">
+                <div class="project-header">
+                    <h3>Mexico Toy Sales Analysis</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/ocanthony4real/Mexico-Toy-Sales-Analysis-SQL-" target="_blank" class="project-link project-link-data" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">SQL and Power BI analysis of toy sales data for a Mexican retail company, identifying seasonal trends, top-performing products, and regional sales patterns.</p>
+                <ul class="project-highlights project-highlights-data">
+                    <li>SQL queries for data extraction and transformation</li>
+                    <li>Seasonal trend identification</li>
+                    <li>Regional sales pattern analysis</li>
+                    <li>Power BI visualization</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Data Analysis</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <span class="section-label section-label-ai">Get in Touch</span>
+        <h2 class="contact-title">Let's Build Something Great</h2>
+        <p class="contact-text">I'm actively seeking opportunities in ML Engineering, AI Development, and Data Analytics. Whether you need AI solutions or data-driven insights — let's connect.</p>
+        <div class="contact-links">
+            <a href="mailto:anthonychukwudiorji@gmail.com" class="contact-link">
+                <span>📧</span>
+                anthonychukwudiorji@gmail.com
+            </a>
+            <a href="tel:+2347067331180" class="contact-link">
+                <span>📱</span>
+                +234 706 733 1180
+            </a>
+            <a href="https://linkedin.com/in/anthony-orji-02311b233" target="_blank" class="contact-link">
+                <span>💼</span>
+                LinkedIn
+            </a>
+            <a href="https://github.com/ocanthony4real" target="_blank" class="contact-link">
+                <span>🔗</span>
+                GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Anthony Orji. Built with passion. Lagos, Nigeria.</p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
